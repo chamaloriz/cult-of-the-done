@@ -28,7 +28,7 @@ jobs:
                     repository: 'quartz'
             - name: Copy current repo files into Quartz repo
               run: |
-                rsync -av --exclude=.git ./content ./quartz/content
+                rsync -av --exclude=.git ./content/ ./quartz/
             - name: Apply custom config
               run: |
                 rsync -av ./quartz-config/quartz.config.ts ./quartz/quartz.config.ts
@@ -41,9 +41,6 @@ jobs:
             - name: Build Quartz
               working-directory: ./quartz
               run: npx quartz build
-            - name: Move content files to root
-              run: |
-                mv /quartz/content/* /quartz/
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
