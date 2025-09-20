@@ -3,3 +3,7 @@ title: Home
 ---
 
 A place where I put everything I finish, fail at, or abandon. Because getting it done is the goal, not perfection. Inspired by [this concept](https://www.youtube.com/watch?v=bJQj1uKtnus).
+
+## 🦀 The projects
+
+- [[Created the 3ronds.net website]]
