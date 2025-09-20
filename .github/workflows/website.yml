@@ -41,6 +41,9 @@ jobs:
             - name: Build Quartz
               working-directory: ./quartz
               run: npx quartz build
+            - name: Move content files to root
+              run: |
+                mv /quartz/content/* /quartz/
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
