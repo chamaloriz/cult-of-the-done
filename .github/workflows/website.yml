@@ -1,0 +1,56 @@
+name: Deploy Quartz site to Server
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+env:
+  SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+  DEPLOY_USER: cult-of-the-done
+  DEPLOY_HOST: 91.99.100.45
+  DEPLOY_PATH: /home/cult-of-the-done/
+
+jobs:
+    build_quartz:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 22
+            - name: Install Dependencies
+              run: npm install
+            - name: Build Quartz
+              run: npx quartz build
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: quartz-site
+                path: public
+
+    deploy_to_server:
+        name: Deploy to Server
+        needs: build_quartz
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/download-artifact@v4
+              with:
+                    name: quartz-site
+                    path: public
+            - name: Move public folder to server
+              run: |
+                    eval "$(ssh-agent -s)"
+                    trap "ssh-agent -k" EXIT
+                    ssh-add - <<< "$SSH_PRIVATE_KEY"
+
+                    rsync \
+                    --archive \
+                    --partial \
+                    --delete \
+                    --include="public/" \
+                    --include="public/***" \
+                    --exclude="*" \
+                    -e "ssh -p 22 -o StrictHostKeyChecking=no" \
+                    ./ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
