@@ -20,6 +20,24 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                 node-version: 22
+            - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
+              uses: GuillaumeFalourd/clone-github-repo-action@v2.3
+              with:
+                    branch: 'main'
+                    owner: 'jackyzha0'
+                    repository: 'quartz'
+            - name: Copy current repo files into Quartz repo
+              run: |
+                rsync -av --exclude=.git ./content ./quartz/content
+            - name: Apply custom config
+              run: |
+                rsync -av ./quartz-config/quartz.config.ts ./quartz/quartz.config.ts
+            - name: Apply custom layout
+              run: |
+                rsync -av ./quartz-config/quartz.layout.ts ./quartz/quartz.layout.ts
+            - name: Move into the Quartz directory
+              run: |
+                cd quartz && ls -la
             - name: Install Dependencies
               run: npm install
             - name: Build Quartz
@@ -27,8 +45,8 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: quartz-site
-                path: public
+                    name: quartz-site
+                    path: quartz/public
 
     deploy_to_server:
         name: Deploy to Server
