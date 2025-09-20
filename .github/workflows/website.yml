@@ -23,7 +23,7 @@ jobs:
             - name: Clone GuillaumeFalourd/poc-github-actions PUBLIC repository
               uses: GuillaumeFalourd/clone-github-repo-action@v2.3
               with:
-                    branch: 'main'
+                    branch: 'v4'
                     owner: 'jackyzha0'
                     repository: 'quartz'
             - name: Copy current repo files into Quartz repo
