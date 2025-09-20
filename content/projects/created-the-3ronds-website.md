@@ -51,3 +51,16 @@ On the repo I followed the structure described in the Quartz documentation, but 
 
 > [!info] Info
 > Now that the files are on the server you can use [Caddy](https://caddyserver.com/) to serve the files to the client, check the article about it here : [[setup-caddy-on-a-webserver]]
+
+## the caddy config
+
+```bash
+3ronds.net {
+    tls /home/caddy/certs/3ronds.net.pem /home/caddy/certs/3ronds.net.key
+    # fix for the folder structure of Quartz
+    try_files {path} {uri}.html
+    # the generated folder
+    root * /home/3ronds/public
+    file_server
+}
+```
