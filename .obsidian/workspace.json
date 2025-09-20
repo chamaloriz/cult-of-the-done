@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/projects/Created the 3ronds.net website.md",
+                "file": "content/infrastructure/setup-caddy-on-a-webserver.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Created the 3ronds.net website"
+              "title": "setup-caddy-on-a-webserver"
             }
           }
         ]
@@ -169,13 +169,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "b80e8fe5d43012e0",
+  "active": "844e5b43068dbd9e",
   "lastOpenFiles": [
+    "content/infrastructure/run-an-ubuntu-server.md",
+    "content/infrastructure/setup-caddy-on-a-webserver.md",
+    "content/projects/created-the-3ronds-website.md",
     "content/index.md",
-    "content/projects/Created the 3ronds.net website.md",
-    "content/infrastructure/Run an Ubuntu server.md",
     "content/infrastructure",
-    "content/infrastructure/Setup Caddy on a webserver.md",
     "Run a Ubuntu web server.md",
     "this article.md",
     "content/projects",

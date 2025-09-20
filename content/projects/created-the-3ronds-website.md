@@ -7,7 +7,7 @@ I used a [github-action workflow](https://github.com/chamaloriz/cult-of-the-done
 The website it hosted on my server running Ubuntu and here are the steps.
 
 > [!info] Preliminary steps
-> At this step you already have a server configured but if not refer to [[Run an Ubuntu server]] and to [[Setup Caddy on a webserver]] to serve the files
+> At this step you already have a server configured but if not refer to [[run-an-ubuntu-server]] and to [[setup-caddy-on-a-webserver]] to serve the files
 ## The server setup
 
 Once on the server using you admin account you can setup a user using the following commands.
@@ -50,4 +50,4 @@ now that you have a private key in you clipboard go to github and create a new r
 On the repo I followed the structure described in the Quartz documentation, but I did not copy the entire Quartz project files into my repo, [I just copied the 2 files needed to configure the project](https://github.com/chamaloriz/cult-of-the-done/tree/main/quartz-config). And I created a `content` folder to store the Markdown files for the website. to publish it to the server, I use the workflow called [website](https://github.com/chamaloriz/cult-of-the-done/blob/main/.github/workflows/website.yml) in the first step, it builds the Quartz files and in the second and last step, it pushed the files to the server using the private key we created in the previous step.
 
 > [!info] Info
-> Now that the files are on the server you can use [Caddy](https://caddyserver.com/) to serve the files to the client, check the article about it here : [[Setup Caddy on a webserver]]
+> Now that the files are on the server you can use [Caddy](https://caddyserver.com/) to serve the files to the client, check the article about it here : [[setup-caddy-on-a-webserver]]

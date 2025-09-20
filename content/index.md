@@ -6,4 +6,4 @@ A place where I put everything I finish, fail at, or abandon. Because getting it
 
 ## 🦀 The projects
 
-- [[Created the 3ronds.net website]]
+- [[created-the-3ronds-website]]
