@@ -28,7 +28,7 @@ jobs:
                     repository: 'quartz'
             - name: Copy current repo files into Quartz repo
               run: |
-                rsync -av --exclude=.git ./content/ ./quartz/
+                rsync -av --exclude=.git ./content/ ./quartz/content
             - name: Apply custom config
               run: |
                 rsync -av ./quartz-config/quartz.config.ts ./quartz/quartz.config.ts
@@ -58,16 +58,16 @@ jobs:
                     path: public
             - name: Move public folder to server
               run: |
-                    eval "$(ssh-agent -s)"
-                    trap "ssh-agent -k" EXIT
-                    ssh-add - <<< "$SSH_PRIVATE_KEY"
+                eval "$(ssh-agent -s)"
+                trap "ssh-agent -k" EXIT
+                ssh-add - <<< "$SSH_PRIVATE_KEY"
 
-                    rsync \
-                    --archive \
-                    --partial \
-                    --delete \
-                    --include="public/" \
-                    --include="public/***" \
-                    --exclude="*" \
-                    -e "ssh -p 22 -o StrictHostKeyChecking=no" \
-                    ./ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+                rsync \
+                --archive \
+                --partial \
+                --delete \
+                --include="public/" \
+                --include="public/***" \
+                --exclude="*" \
+                -e "ssh -p 22 -o StrictHostKeyChecking=no" \
+                ./ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
