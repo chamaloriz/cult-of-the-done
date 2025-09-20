@@ -35,12 +35,11 @@ jobs:
             - name: Apply custom layout
               run: |
                 rsync -av ./quartz-config/quartz.layout.ts ./quartz/quartz.layout.ts
-            - name: Move into the Quartz directory
-              run: |
-                cd quartz && ls -la
             - name: Install Dependencies
+              working-directory: ./quartz
               run: npm install
             - name: Build Quartz
+              working-directory: ./quartz
               run: npx quartz build
             - name: Upload artifact
               uses: actions/upload-artifact@v4
