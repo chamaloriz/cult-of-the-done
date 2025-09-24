@@ -9,7 +9,8 @@ on:
 env:
   SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
   DEPLOY_USER: cult-of-the-done
-  DEPLOY_HOST: 91.99.100.45
+  DEPLOY_HOST: 95.217.89.204
+  DEPLOY_PORT: 14620
   DEPLOY_PATH: /home/cult-of-the-done/
 
 jobs:
@@ -69,5 +70,5 @@ jobs:
                 --include="public/" \
                 --include="public/***" \
                 --exclude="*" \
-                -e "ssh -p 22 -o StrictHostKeyChecking=no" \
+                -e "ssh -p $DEPLOY_PORT -o StrictHostKeyChecking=no" \
                 ./ $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH

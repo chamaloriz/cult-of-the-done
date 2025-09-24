@@ -22,6 +22,9 @@ sudo useradd -m 3ronds
 # Then I generated a ssh-key for that user using this command
 # First I enter the 3ronds user bash console
 sudo -u 3ronds bash
+# or use this if sudo is not available
+su - 3ronds -s /bin/bash
+
 # And generate the key for that user
 # I just press enter we don't need a password for this key
 ssh-keygen -t ed25519 -C "3ronds server"
@@ -53,6 +56,13 @@ On the repo I followed the structure described in the Quartz documentation, but 
 > Now that the files are on the server you can use [Caddy](https://caddyserver.com/) to serve the files to the client, check the article about it here : [[setup-caddy-on-a-webserver]]
 
 ## the caddy config
+
+```bash
+
+# You need to make caddy part of the project user group so that caddy can see into the /home/3ronds folder.
+sudo usermod -a -G 3ronds caddy
+
+```
 
 ```bash
 3ronds.net {
