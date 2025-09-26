@@ -14,7 +14,5 @@ vi /etc/ssh/sshd_config
 
 sudo apt update && sudo apt upgrade
 
-ssh -NL 1111:localhost:5432 server
-
 sudo adduser -m username
 ```
