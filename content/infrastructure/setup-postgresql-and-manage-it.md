@@ -1,5 +1,5 @@
 ---
-title: Setup postgresql and manage it
+title: Setup PostgreSQL and manage it
 created: 2025-09-26
 ---
 # Setup [PostgreSQL](https://www.postgresql.org/) and manage it
