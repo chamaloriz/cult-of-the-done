@@ -47,12 +47,12 @@ sudo nano /etc/systemd/system/simple-script.service
 ```bash
 # systemd service file
 [Unit]
-Description=bot-vendor daemon
+Description=simple-script daemon
 After=network.target
 
 [Service]
-User=bot-vendor
-Group=bot-vendor
+User=simple-script
+Group=simple-script
 WorkingDirectory=/home/simple-script/simple_script/
 ExecStart=/home/simple-script/simple_script/venv/bin/python3 main.py
 
