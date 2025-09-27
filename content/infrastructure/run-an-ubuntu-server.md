@@ -4,9 +4,9 @@ created: 2025-09-20
 ---
 # Run an [Ubuntu](https://ubuntu.com/server) server
 
-```bash
-# WIP
+> [!warning] Work In Progress
 
+```bash
 vi ~/.ssh/authorized_keys
 
 # PasswordAuthentication **no**
