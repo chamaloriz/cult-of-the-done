@@ -7,4 +7,5 @@ A place where I put everything I finish, fail at, or abandon. Because getting it
 
 ## 🦀 The projects
 
+- [[fixing-multicanvas-support-in-bevy]]
 - [[created-the-3ronds-website]]
