@@ -7,5 +7,6 @@ A place where I put everything I finish, fail at, or abandon. Because getting it
 
 ## 🦀 The projects
 
+- [[take-control-on-the-youtube-feed-the-data]]
 - [[fixing-multicanvas-support-in-bevy]]
 - [[created-the-3ronds-website]]
