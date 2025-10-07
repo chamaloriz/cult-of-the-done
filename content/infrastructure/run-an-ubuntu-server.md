@@ -15,4 +15,10 @@ vi /etc/ssh/sshd_config
 sudo apt update && sudo apt upgrade
 
 sudo adduser -m username
+
+sudo systemctl start app.service
+
+sudo systemctl status app.service
+
+sudo journalctl -u app.service
 ```
