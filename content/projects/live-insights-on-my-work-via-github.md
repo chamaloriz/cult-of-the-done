@@ -5,8 +5,9 @@ tags:
   - success
   - macos
 ---
-![[contributionbar-logo-light.png]]
-
+<a href="https://github.com/chamaloriz/contribution-bar" target="_blanc" >
+	<img src="contributionbar-logo-light.png" >
+</a>
 I love checking my daily GitHub activity on my profile page. It's a nice way to see how I'm doing while giving me insights on my mental state over the course of a year. To make it easier to view, I came up with the idea of putting it in my macOS taskbar. In this article, I'll explain everything I discovered and learned while doing it. [here is the app link](https://github.com/chamaloriz/contribution-bar).
 
 ![[contributionbar-demo.png]]
