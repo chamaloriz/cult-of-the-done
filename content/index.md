@@ -7,6 +7,7 @@ A place where I put everything I finish, fail at, or abandon. Because getting it
 
 ## The projects
 
+- [[bevy-split-canvas-my-first-crate]]
 - [[live-insights-on-my-work-via-github]]
 - [[take-control-of-the-youtube-feed-the-data]]
 - [[fixing-multicanvas-support-in-bevy]]
@@ -15,3 +16,4 @@ A place where I put everything I finish, fail at, or abandon. Because getting it
 ## The Final Products
 
 - [ContributionBar](https://github.com/chamaloriz/contribution-bar)
+- [bevy_split_canvas](https://github.com/chamaloriz/bevy_split_canvas)
