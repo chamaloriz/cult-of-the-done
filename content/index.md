@@ -12,6 +12,7 @@ A place where I put everything I finish, fail at, or abandon. Because getting it
 
 ## The Experiments
 - [bevy_invaders](https://github.com/chamaloriz/bevy_invaders)
+- [bevy_globe](https://github.com/chamaloriz/bevy_globe)
 
 ## The Thoughts
 - [[bevy-split-canvas-my-first-crate]]
