@@ -10,7 +10,7 @@ A place where I put everything I finish, fail at, or abandon. Because getting it
 - [bevy_split_canvas](https://github.com/chamaloriz/bevy_split_canvas)
 - [bevy_confetti](https://github.com/chamaloriz/bevy_confetti)
 
-## Experiments
+## The Experiments
 - [bevy_invaders](https://github.com/chamaloriz/bevy_invaders)
 
 ## The Thoughts
