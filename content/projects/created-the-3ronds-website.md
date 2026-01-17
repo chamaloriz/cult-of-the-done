@@ -1,5 +1,5 @@
 ---
-title: Created the 3ronds.net website.
+title: Created the ஃ.net website.
 created: 2025-09-20
 tags:
   - web
@@ -69,8 +69,8 @@ sudo usermod -a -G 3ronds caddy
 ```
 
 ```bash
-3ronds.net {
-    tls /home/caddy/certs/3ronds.net.pem /home/caddy/certs/3ronds.net.key
+ஃ.net {
+    tls /home/caddy/certs/ஃ.net.pem /home/caddy/certs/ஃ.net.key
     # fix for the folder structure of Quartz
     try_files {path} {uri}.html
     # the generated folder
